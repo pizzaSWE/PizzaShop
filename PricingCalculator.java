@@ -1,15 +1,15 @@
 public class PricingCalculator {
     
-    double smallPizzaPrice = 5;
-    double mediumPizzaPrice = 8;
-    double largePizzaPrice = 12;
-    double extraLargePizzaPrice = 16;
+    static double smallPizzaPrice = 5;
+    static double mediumPizzaPrice = 8;
+    static double largePizzaPrice = 12;
+    static double extraLargePizzaPrice = 16;
 
-    double toppingPrice = .75;
+    static double toppingPrice = .75;
 
-    double smallDrinkPrice = 1;
-    double mediumDrinkPrice = 2.25;
-    double largeDrinkPrice = 3.15;
+    static double smallDrinkPrice = 1;
+    static double mediumDrinkPrice = 2.25;
+    static double largeDrinkPrice = 3.15;
 
     public static double getPizzaPrice(Pizza p)
     {

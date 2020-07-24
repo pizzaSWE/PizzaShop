@@ -27,13 +27,13 @@ public class Checkout extends javax.swing.JPanel {
 
     private void populateTextbox()
     {
-        for (int i = 0; i < OrderXML.items.pizzas.size(); ++i) {
-            jTextArea1.append("Pizza " + i + ": $" + PricingCalculator.getPizzaPrice(OrderXML.items.pizzas.get(i)) + "\n");
-        }
+        // for (int i = 0; i < OrderXML.items.pizzas.size(); ++i) {
+        //     jTextArea1.append("Pizza " + i + ": $" + PricingCalculator.getPizzaPrice(OrderXML.items.pizzas.get(i)) + "\n");
+        // }
 
-        for (int i = 0; i < OrderXML.items.drinks.size(); ++i) {
-            jTextArea1.append("Drink " + i + ": $" + PricingCalculator.getDrinkPrice(OrderXML.items.drinks.get(i)) + "\n");
-        }
+        // for (int i = 0; i < OrderXML.items.drinks.size(); ++i) {
+        //     jTextArea1.append("Drink " + i + ": $" + PricingCalculator.getDrinkPrice(OrderXML.items.drinks.get(i)) + "\n");
+        // }
     }
     JPanel mainPanel;
 

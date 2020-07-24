@@ -92,7 +92,7 @@ public class TopLevelMenu extends javax.swing.JPanel {
     }                                           
 
     private void openCartActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO: make shopping cart panel
+        ((CardLayout)mainPanel.getLayout()).show(mainPanel, "Cart");
     }                                        
 
     private void openAccountInfoActionPerformed(java.awt.event.ActionEvent evt) {                                                

@@ -8,6 +8,7 @@ import java.awt.*;
 	   JPanel acctinfo;
 	   JPanel checkout;
 	   JPanel topLevelMenu;
+	   JPanel cart;
 	   // JPanel paymentMethodPage = new ...
 	   // JPanel ....
 	   // ....
@@ -22,10 +23,12 @@ import java.awt.*;
 			topLevelMenu = new TopLevelMenu(mainPanel);
 			acctinfo = new AccountInfo(mainPanel);
 			checkout = new PaymentMethodsAndCheckoutMenu(mainPanel);
+			cart = new Checkout(mainPanel);
 
 			mainPanel.add(acctinfo, "AccountInfo");
 			mainPanel.add(checkout, "Checkout");
 			mainPanel.add(topLevelMenu, "TopLevelMenu");
+			mainPanel.add(cart, "Cart");
 
 			((CardLayout)mainPanel.getLayout()).show(mainPanel, "TopLevelMenu");
 			//((CardLayout)mainPanel.getLayout()).show(mainPanel, "AccountInfo");

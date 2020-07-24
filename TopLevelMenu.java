@@ -3,12 +3,14 @@ import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 public class TopLevelMenu extends javax.swing.JPanel {
 
-	CardLayout cardLayout = new CardLayout();
-    JPanel topLevelPanel = new JPanel(cardLayout);
+	JPanel mainPanel;
+    JPanel topLevelPanel;
 	/**
      * Creates new form TopLevelMenuFrame
      */
-    public TopLevelMenu(CardLayout cards) {
+    public TopLevelMenu(JPanel mainPanel) {
+        this.mainPanel = mainPanel;
+        topLevelPanel = new JPanel(mainPanel.getLayout());
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         initComponents();
     }
@@ -86,18 +88,16 @@ public class TopLevelMenu extends javax.swing.JPanel {
     }// </editor-fold>                        
 
     private void createOrderActionPerformed(java.awt.event.ActionEvent evt) {                                            
-        this.setVisible(false);
-        new PaymentMethodsAndCheckoutMenu(cardLayout).setVisible(true);
+        ((CardLayout)mainPanel.getLayout()).show(mainPanel, "Checkout");
     }                                           
 
     private void openCartActionPerformed(java.awt.event.ActionEvent evt) {                                         
-    	this.setVisible(false); 
-        
+        // TODO: make shopping cart panel
     }                                        
 
     private void openAccountInfoActionPerformed(java.awt.event.ActionEvent evt) {                                                
-    	this.setVisible(false);
-        new AccountInfo(cardLayout).setVisible(true);
+        //new AccountInfo(cardLayout).setVisible(true);
+        ((CardLayout)mainPanel.getLayout()).show(mainPanel, "AccountInfo");
     }                                               
 
 

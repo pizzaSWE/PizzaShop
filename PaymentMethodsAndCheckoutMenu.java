@@ -17,7 +17,7 @@ public class PaymentMethodsAndCheckoutMenu extends javax.swing.JPanel{
     /**
      * Creates new form PaymentMethodsAndCheckoutMenu
      */
-    public PaymentMethodsAndCheckoutMenu(CardLayout cards) {
+    public PaymentMethodsAndCheckoutMenu(JPanel mainPanel) {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         initComponents();
     }

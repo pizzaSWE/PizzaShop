@@ -5,11 +5,13 @@ import java.awt.*;
 
 public class AccountInfo extends JPanel
 {
-    public AccountInfo (CardLayout cards)
+    public AccountInfo (JPanel mainPanel)
     {
+        this.mainPanel = mainPanel;
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         initComponents();
     }
+    JPanel mainPanel;
 
       private void initComponents() {
 

@@ -19,9 +19,9 @@ import java.awt.*;
 
 			// setup cards
 			mainPanel = new JPanel(new CardLayout());
-			topLevelMenu = new TopLevelMenu((CardLayout) mainPanel.getLayout());
-			acctinfo = new AccountInfo((CardLayout) mainPanel.getLayout());
-			checkout = new PaymentMethodsAndCheckoutMenu((CardLayout) mainPanel.getLayout());
+			topLevelMenu = new TopLevelMenu(mainPanel);
+			acctinfo = new AccountInfo(mainPanel);
+			checkout = new PaymentMethodsAndCheckoutMenu(mainPanel);
 
 			mainPanel.add(acctinfo, "AccountInfo");
 			mainPanel.add(checkout, "Checkout");

@@ -180,7 +180,7 @@ public class AccountInfo extends JPanel
         );
     }// </editor-fold>                                                      
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {  
         firstname = jTextField1.getText();
         lastname = jTextField2.getText();
         phone = jTextField3.getText();
@@ -204,6 +204,8 @@ public class AccountInfo extends JPanel
         OrderXML.customer.secCode = security;
 
         OrderXML.saveXML();
+
+        ((CardLayout)mainPanel.getLayout()).show(mainPanel, "TopLevelMenu");
     }                                        
 
 

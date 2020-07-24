@@ -70,7 +70,7 @@ public class AccountInfo extends JPanel
 
         jTextField8.setColumns(16);
 
-        jLabel9.setText("jLabel9");
+        jLabel9.setText("Security Code");
 
         jTextField7.setColumns(5);
 

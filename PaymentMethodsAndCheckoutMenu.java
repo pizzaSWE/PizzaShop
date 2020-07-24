@@ -80,6 +80,11 @@ public class PaymentMethodsAndCheckoutMenu extends javax.swing.JPanel{
 
         pizzaSizeBG.add(mediumJRB);
         mediumJRB.setText("Medium");
+        mediumJRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mediumJRBActionPerformed(evt);
+            }
+        });
 
         pizzaSizeBG.add(largeJRB);
         largeJRB.setText("Large");
@@ -135,26 +140,61 @@ public class PaymentMethodsAndCheckoutMenu extends javax.swing.JPanel{
 
         pizzaSizeBG.add(extraLargeJRB);
         extraLargeJRB.setText("Extra Large");
+        extraLargeJRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                extraLargeJRBActionPerformed(evt);
+            }
+        });
 
         crustOptionsBG.add(handTossedJRB);
         handTossedJRB.setText("Hand Tossed");
+        handTossedJRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                handTossedJRBActionPerformed(evt);
+            }
+        });
 
         crustOptionsBG.add(thinCrustJRB);
         thinCrustJRB.setText("Thin Crust");
+        thinCrustJRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                thinCrustJRBActionPerformed(evt);
+            }
+        });
 
         crustOptionsBG.add(deepDishJRB);
         deepDishJRB.setText("Deep Dish");
+        deepDishJRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deepDishJRBActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Beverage Sizes");
 
         beverageSizeBG.add(smallBevJRB);
         smallBevJRB.setText("Small");
+        smallBevJRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                smallBevJRBActionPerformed(evt);
+            }
+        });
 
         beverageSizeBG.add(mediumBevJRB);
         mediumBevJRB.setText("Medium");
+        mediumBevJRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mediumBevJRBActionPerformed(evt);
+            }
+        });
 
         beverageSizeBG.add(largeBevJRB);
         largeBevJRB.setText("Large");
+        largeBevJRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                largeBevJRBActionPerformed(evt);
+            }
+        });
 
         checkoutJB.setText("Add Items");
         checkoutJB.addActionListener(new java.awt.event.ActionListener() {
@@ -179,21 +219,51 @@ public class PaymentMethodsAndCheckoutMenu extends javax.swing.JPanel{
 
         pizzaSizeBG.add(smallJRB);
         smallJRB.setText("small");
+        smallJRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                smallJRBActionPerformed(evt);
+            }
+        });
 
         beverageTypeBG.add(cokeJRB);
         cokeJRB.setText("Coke");
+        cokeJRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cokeJRBActionPerformed(evt);
+            }
+        });
 
         beverageTypeBG.add(dietCokeJRB);
         dietCokeJRB.setText("Diet Coke");
+        dietCokeJRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dietCokeJRBActionPerformed(evt);
+            }
+        });
 
         beverageTypeBG.add(orangeJuiceJRB);
         orangeJuiceJRB.setText("Orange Juice");
+        orangeJuiceJRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                orangeJuiceJRBActionPerformed(evt);
+            }
+        });
 
         beverageTypeBG.add(spriteJRB);
         spriteJRB.setText("Sprite");
+        spriteJRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                spriteJRBActionPerformed(evt);
+            }
+        });
 
         beverageTypeBG.add(icedTeaJRB);
         icedTeaJRB.setText("Iced Tea");
+        icedTeaJRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                icedTeaJRBActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

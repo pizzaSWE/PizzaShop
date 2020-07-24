@@ -334,12 +334,7 @@ public class PaymentMethodsAndCheckoutMenu extends javax.swing.JPanel{
     }// </editor-fold>//GEN-END:initComponents
 
     private void checkoutJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkoutJBActionPerformed
-        pizzaSize =  String.valueOf(pizzaSizeBG.getSelection());
-        crustOption = String.valueOf(crustOptionsBG.getSelection());
-        beverageSize = String.valueOf(beverageSizeBG.getSelection());
-        beverageType = String.valueOf(beverageTypeBG.getSelection());
-        
-        
+
         Drink drinks = new Drink();
         drinks.size = beverageSize;
         drinks.type = beverageType;
@@ -349,15 +344,14 @@ public class PaymentMethodsAndCheckoutMenu extends javax.swing.JPanel{
         pizza.crust = crustOption;
         pizza.toppings = toppings;
         
-        
         OrderXML.initialize();
         OrderXML.readXML();
-
+        
         OrderXML.items.pizzas.add(pizza);
         OrderXML.items.drinks.add(drinks);
         
         
-        
+
         OrderXML.saveXML();
     }//GEN-LAST:event_checkoutJBActionPerformed
 
@@ -417,7 +411,82 @@ public class PaymentMethodsAndCheckoutMenu extends javax.swing.JPanel{
         }
     }//GEN-LAST:event_beefJCBActionPerformed
 
-    private void backToMenuActionPerformed(java.awt.event.ActionEvent evt) {
+    private void smallJRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smallJRBActionPerformed
+        if (smallJRB.isSelected())
+        pizzaSize = "Small";
+    }//GEN-LAST:event_smallJRBActionPerformed
+
+    private void mediumJRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mediumJRBActionPerformed
+        if (mediumJRB.isSelected())
+        pizzaSize = "Medium";
+    }//GEN-LAST:event_mediumJRBActionPerformed
+
+    private void largeJRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_largeJRBActionPerformed
+        if (largeJRB.isSelected())
+        pizzaSize = "Large";
+    }//GEN-LAST:event_largeJRBActionPerformed
+
+    private void extraLargeJRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_extraLargeJRBActionPerformed
+        if (extraLargeJRB.isSelected())
+        pizzaSize = "Extra Large";
+    }//GEN-LAST:event_extraLargeJRBActionPerformed
+
+    private void handTossedJRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_handTossedJRBActionPerformed
+        if (handTossedJRB.isSelected())
+            crustOption = "Hand Tossed";
+    }//GEN-LAST:event_handTossedJRBActionPerformed
+
+    private void thinCrustJRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thinCrustJRBActionPerformed
+        if (thinCrustJRB.isSelected())
+            crustOption = "Thin Crust";
+    }//GEN-LAST:event_thinCrustJRBActionPerformed
+
+    private void deepDishJRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deepDishJRBActionPerformed
+        if (deepDishJRB.isSelected())
+            crustOption = "Deep Dish";
+    }//GEN-LAST:event_deepDishJRBActionPerformed
+
+    private void cokeJRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cokeJRBActionPerformed
+        if (cokeJRB.isSelected())
+            beverageType = "Coke";
+    }//GEN-LAST:event_cokeJRBActionPerformed
+
+    private void dietCokeJRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dietCokeJRBActionPerformed
+        if (dietCokeJRB.isSelected())
+            beverageType = "Diet Coke";
+    }//GEN-LAST:event_dietCokeJRBActionPerformed
+
+    private void spriteJRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_spriteJRBActionPerformed
+        if (spriteJRB.isSelected())
+            beverageType = "Sprite";
+    }//GEN-LAST:event_spriteJRBActionPerformed
+
+    private void orangeJuiceJRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orangeJuiceJRBActionPerformed
+        if (orangeJuiceJRB.isSelected())
+            beverageType = "Orange Juice";
+    }//GEN-LAST:event_orangeJuiceJRBActionPerformed
+
+    private void icedTeaJRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_icedTeaJRBActionPerformed
+        if (icedTeaJRB.isSelected())
+            beverageType = "Iced Tea";
+    }//GEN-LAST:event_icedTeaJRBActionPerformed
+
+    private void smallBevJRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smallBevJRBActionPerformed
+        if (smallBevJRB.isSelected())
+            beverageSize = "Small";
+    }//GEN-LAST:event_smallBevJRBActionPerformed
+
+    private void mediumBevJRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mediumBevJRBActionPerformed
+        if (mediumBevJRB.isSelected())
+            beverageSize = "Medium";
+    }//GEN-LAST:event_mediumBevJRBActionPerformed
+
+    private void largeBevJRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_largeBevJRBActionPerformed
+        if (largeBevJRB.isSelected())
+            beverageSize = "Large";
+    }//GEN-LAST:event_largeBevJRBActionPerformed
+    
+        private void backToMenuActionPerformed(java.awt.event.ActionEvent evt) {
         ((CardLayout)mainPanel.getLayout()).show(mainPanel, "TopLevelMenu");
     }
 
@@ -465,3 +534,7 @@ public class PaymentMethodsAndCheckoutMenu extends javax.swing.JPanel{
     private String beverageType;
     private ArrayList<String> toppings = new ArrayList<String>();
 }
+
+
+
+    

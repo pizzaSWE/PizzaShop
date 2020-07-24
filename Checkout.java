@@ -103,6 +103,8 @@ public class Checkout extends javax.swing.JPanel {
     }//GEN-LAST:event_cancelJBActionPerformed
 
     private void checkoutJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkoutJBActionPerformed
+        JOptionPane.showMessageDialog(mainPanel, "Order Sent");
+        System.exit(0);
         ((CardLayout)mainPanel.getLayout()).show(mainPanel, "TopLevelMenu");
     }//GEN-LAST:event_checkoutJBActionPerformed
     

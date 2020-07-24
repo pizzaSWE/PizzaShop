@@ -11,7 +11,7 @@ public class PricingCalculator {
     double mediumDrinkPrice = 2.25;
     double largeDrinkPrice = 3.15;
 
-    public double getPizzaPrice(Pizza p)
+    public static double getPizzaPrice(Pizza p)
     {
         double price = 0;
 
@@ -32,7 +32,7 @@ public class PricingCalculator {
         return price;
     }
 
-    public double getDrinkPrice(Drink d) {
+    public static double getDrinkPrice(Drink d) {
         double price = 0;
 
         if (d.size == "Small") {

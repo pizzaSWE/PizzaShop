@@ -253,22 +253,6 @@ class Items {
     public ArrayList<Drink> drinks;
 }
 
-class Pizza {
-    public String size = "";
-    public String crust = "";
-    public ArrayList<String> toppings;
-
-    public Pizza ()
-    {
-        toppings = new ArrayList<String>();
-    }
-}
-
-class Drink {
-    public String size = "";
-    public String type = "";
-}
-
 class Customer
 {
     public String firstName = "";

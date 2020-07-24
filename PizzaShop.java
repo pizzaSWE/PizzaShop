@@ -7,25 +7,30 @@ import java.awt.*;
 	   JPanel mainPanel;
 	   JPanel acctinfo;
 	   JPanel checkout;
+	   JPanel topLevelMenu;
 	   // JPanel paymentMethodPage = new ...
 	   // JPanel ....
 	   // ....
 
 	   public PizzaShop()
 	   {
-	       setTitle("Mom and Pop");
+	       setTitle("Mom and Pop Pizza Shop");
 	       setSize(800, 600);
 
 			// setup cards
 			mainPanel = new JPanel(new CardLayout());
+			topLevelMenu = new TopLevelMenu((CardLayout) mainPanel.getLayout());
 			acctinfo = new AccountInfo((CardLayout) mainPanel.getLayout());
 			checkout = new PaymentMethodsAndCheckoutMenu((CardLayout) mainPanel.getLayout());
 
 			mainPanel.add(acctinfo, "AccountInfo");
 			mainPanel.add(checkout, "Checkout");
+			mainPanel.add(topLevelMenu, "TopLevelMenu");
 
+			((CardLayout)mainPanel.getLayout()).show(mainPanel, "TopLevelMenu");
 			//((CardLayout)mainPanel.getLayout()).show(mainPanel, "AccountInfo");
-			((CardLayout)mainPanel.getLayout()).show(mainPanel, "Checkout");
+			//((CardLayout)mainPanel.getLayout()).show(mainPanel, "Checkout");
+			
 
 			this.add(mainPanel);
 

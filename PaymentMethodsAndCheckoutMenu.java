@@ -19,9 +19,11 @@ public class PaymentMethodsAndCheckoutMenu extends javax.swing.JPanel{
      */
     public PaymentMethodsAndCheckoutMenu(JPanel mainPanel) {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        this.mainPanel = mainPanel;
         initComponents();
     }
 
+    JPanel mainPanel;
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -169,6 +171,11 @@ public class PaymentMethodsAndCheckoutMenu extends javax.swing.JPanel{
         });
 
         jButton1.setText("Back To Menu");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backToMenuActionPerformed(evt);
+            }
+        });
 
         pizzaSizeBG.add(smallJRB);
         smallJRB.setText("small");
@@ -409,6 +416,10 @@ public class PaymentMethodsAndCheckoutMenu extends javax.swing.JPanel{
         toppings.add(beefJCB.getText());
         }
     }//GEN-LAST:event_beefJCBActionPerformed
+
+    private void backToMenuActionPerformed(java.awt.event.ActionEvent evt) {
+        ((CardLayout)mainPanel.getLayout()).show(mainPanel, "TopLevelMenu");
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

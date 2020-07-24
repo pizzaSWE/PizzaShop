@@ -20,10 +20,10 @@ import java.awt.*;
 
 			// setup cards
 			mainPanel = new JPanel(new CardLayout());
-			topLevelMenu = new TopLevelMenu(mainPanel);
+			cart = new Checkout(mainPanel);
+			topLevelMenu = new TopLevelMenu(mainPanel, (Checkout)cart);
 			acctinfo = new AccountInfo(mainPanel);
 			checkout = new PaymentMethodsAndCheckoutMenu(mainPanel);
-			cart = new Checkout(mainPanel);
 
 			mainPanel.add(acctinfo, "AccountInfo");
 			mainPanel.add(checkout, "Checkout");

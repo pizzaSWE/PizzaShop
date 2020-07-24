@@ -557,6 +557,7 @@ public class PaymentMethodsAndCheckoutMenu extends javax.swing.JPanel{
     }//GEN-LAST:event_largeBevJRBActionPerformed
     
         private void backToMenuActionPerformed(java.awt.event.ActionEvent evt) {
+            System.out.println(OrderXML.items.pizzas.size());
         ((CardLayout)mainPanel.getLayout()).show(mainPanel, "TopLevelMenu");
     }
 

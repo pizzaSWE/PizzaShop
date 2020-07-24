@@ -5,11 +5,13 @@ public class TopLevelMenu extends javax.swing.JPanel {
 
 	JPanel mainPanel;
     JPanel topLevelPanel;
+    Checkout cart;
 	/**
      * Creates new form TopLevelMenuFrame
      */
-    public TopLevelMenu(JPanel mainPanel) {
+    public TopLevelMenu(JPanel mainPanel, Checkout cart) {
         this.mainPanel = mainPanel;
+        this.cart = cart;
         topLevelPanel = new JPanel(mainPanel.getLayout());
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         initComponents();
@@ -91,7 +93,8 @@ public class TopLevelMenu extends javax.swing.JPanel {
         ((CardLayout)mainPanel.getLayout()).show(mainPanel, "Checkout");
     }                                           
 
-    private void openCartActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void openCartActionPerformed(java.awt.event.ActionEvent evt) {  
+        this.cart.populateTextbox();                                       
         ((CardLayout)mainPanel.getLayout()).show(mainPanel, "Cart");
     }                                        
 
